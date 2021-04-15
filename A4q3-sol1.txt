@@ -1,0 +1,45 @@
+(a)
+                                   " "
+                                /      \
+                               /  ....  \         (5 branches)
+                              M          Y
+                           / | | \    / | | \     (4 branches each)
+                          O  N E  Y  M  O N  E
+                        / | \ ................    (3 branches each)
+                       N  E  Y
+                      / \ .....................   (2 branches each)
+                     E   Y
+                     |   | .....................  (1 leaf each)
+                     Y   E
+                     
+                     
+                     
+(b)  push(M)             |                 
+     push(O)             |                 
+     push(N)             |                 
+     push(E)             |                 
+     push(Y)             |       first 5 branches accounted for. observe the number of pushes made per substring.          
+     pop(Y)              |       pop element last in           
+     push(YM)            |       push('YM', 'YO', 'YN', 'YE) in the follwing steps. observe the number of pushes made, and chars in the substring.            
+     push(YO)            |                  
+     push(YN)            |                 
+     push(YE)            |                
+     pop(YE)             |                 
+     push(YEM)           |
+     push(YEO)           |
+     push(YEN)           |
+     pop(YEN)            |
+     push(YENM)          |
+     push(YENO)          |
+     pop(YENO)           |      pop the 'last in' 4 letter string from the stack, append the char at leaf node in corresponding graph and store it elsewhere/count it.
+     pop(YENM)           |      similar to above step
+       ..                |                   .......
+      
+     [Here, I have written the stack element that has been popped inside the pop() call, which is usually not how it is written, this is just for illustrative purposes] 
+     One can observe that the total number of pushes will be equal to the total number of pops in this scenario. 
+     The total number of pushes is 5 + 5.4 + 5.4.3 + 5.4.3.2 + 5.4.3.2.1 = 325
+     
+     Thus the total expense would be 650 O(1) operations. (Thus, Cuzz would need 650 seconds to escape Search Space.)
+                         
+     From the tree structure, we see that every node/vertex in this tree is visited, and since each visit is a constant time operation, the time complexity can be given by O(V) where V is the number
+     of vertices. You must also note that the data structure used to implement this algorithm (effectively DFS) will affect its time complexity.  	   
