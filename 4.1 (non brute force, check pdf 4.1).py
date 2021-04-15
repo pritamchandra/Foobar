@@ -1,3 +1,4 @@
+# Refer to 4.1 extended discussion
 def solution(times, time_limit):
     N = len(times)
     
