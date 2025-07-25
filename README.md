@@ -2,6 +2,4 @@
 
 Spoiler alert! Contains solutions to questions in the Foobar challenge conducted by Google.
 
-PDFs might be easier to view from drive.
-
-Drive: https://drive.google.com/drive/folders/10nndc2eyCpGqOyLBkkWrKuihQZ5vsaN-?usp=sharing
+Some additional theoretical discussion of graphs with zero cycles in [extended discussion](4.1_extended_discussion.py).
